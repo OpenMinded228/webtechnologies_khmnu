@@ -1,0 +1,91 @@
+{% extends 'header.html'%}
+{% load static %}
+
+{% block title %}Клієнт{% endblock %}
+
+{% block special1 %}
+	<nav>
+		<h2>Швидка навігація</h2>
+		<ul>
+			<li><a href="#client">Повний клієнт <br> (19.03.2022)</a></li>
+			{% for data in updates_data %}
+			<li><a href="#{{data.id}}">{{data.name}} <br> {{data.date}}</a></li>			
+			{% endfor %}
+			<li><a href="#update1">New Year Update* <br> (31.12.2021)</a></li>
+			<li><a href="#update2">Halloween Update* <br> (31.10.2021)</a></li>
+			<li><a href="#update3">Revolutionary Update* <br> (17.08.2021)</a></li>
+			<li><a href="#update4">The Enormous Update* <br> (16.02.2021)</a></li>
+		</ul>
+	</nav>
+
+	<section>
+{% endblock %}
+
+{% block btn3 %}class="active"{% endblock %}
+
+{% block content %}
+			<link rel="stylesheet" href="{% static 'css/client.css' %}">
+			<h1 id="client">Клієнт серверу</h1>
+
+			<h3 >Повний клієнт</h3>
+			<p>Посилання: <a href="" class="btn">WINDOWS <i class="fa-brands fa-windows"></i></a></p>
+			<p id="client">Для запуску потрібен встановлений Microsoft Visual C++ 2015-2019 x86 Redistributable, інакше з’явиться помилка.<br>Встановити його можна за цим посиланням: <span><a href="https://docs.microsoft.com/ru-ru/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">https://docs.microsoft.com/ru-ru/cpp/windows/latest-supported-vc-redist?view=msvc-170</a></span></p>
+			<br>
+			<p>Оновлення, які помічені зірочкою(*) вже є в повному клієнті.</p>
+
+			
+			{% for data in updates_data %}
+				<h3 id="{{data.id}}">{{data.name|safe}}{% if data.included_in_client %}*{% endif %}</h3>
+				<p >
+					{{data.description|safe}}
+				</p>
+				
+				{% if data.update_link or data.fix_link %}
+				<p>Посилання: 
+					{% if data.update_link %}<a href="{{data.update_link}}" class="btn" target="_blank">GOOGLE DRIVE</a> {% endif %}
+					{% if data.fix_link %}
+					<a href="{{data.fix_link}}" class="btn" target="_blank">ФІКС</a>
+					{% endif %}
+				</p>
+				{% endif %}
+			{% endfor %}
+			
+			<h3 id="update1">New Year Update*</h3>
+			<p>
+				<ul>
+					<li>Більшість бекграундів замінено на HD (Завдяки Юзера), а також були перейменовані для швидшого пошуку</li>
+					<li>Нові персонажі: ZeroAPZ, Togami(AA), Sho Minamimoto, Neku Sakuraba, Barry, Klavier (twua2), RyunosukeBadgeless</li>
+					<li>Персонажі Hutch, Shiv, Barok Z, Tobias Gregson, Ryutaro, Mamemomi, Goulloyne, Chiaki, Komaeda замінені на HD</li>
+					<li>Журі замінені на персонажів вищої якості</li>
+					<li>Замінені вигуки Phoenix, Miles, Manfred, Godot, Mia на якісніші</li>
+					<li>Додано музику з SJ, P4, P3 (розширено кількість треків)</li>
+				</ul>
+			</p>
+			<p>Посилання: <a href="" class="btn" target="_blank">GOOGLE DRIVE</a></p>
+
+			<h3 id="update2">Halloween Update*</h3>
+			<p>Велике оновлення. Ознайомитись із змістом можна <span><a href="">тут</a></span></p>
+			<p >Посилання: <a href="" class="btn" target="_blank">GOOGLE DRIVE</a><a href="" class="btn" target="_blank">ФІКС</a></p>
+
+			<h3 id="update3">Revolutionary Update*</h3>
+			<p>Велике оновлення. Ознайомитись із змістом можна <span><a href="">тут</a></span> і <span><a href="">тут</a></span></p>
+			<p >Посилання: <a href="" class="btn" target="_blank">GOOGLE DRIVE</a><a href="" class="btn" target="_blank">ФІКС</a></p>
+
+			<h3 id="update4">The Enormous Update*</h3>
+			<p>
+				<ul>
+					<li>Нові персонажі: Behleeb, Boistrum, Foxy, Fuyuhiko, Junko, Royal Guard, Taka, Sonia, Togami, Maggey Casual, MayaKid, Miles Wit (glasses), MilesDD, NaruWit, PhoenixPLvsPW, Regina AAI, ScuttlebuttFree</li>
+					<li>Реріп: ApolloDDInjured, PhoenixSOJ, AthenaCykesSOJ, Susato</li>
+					<li>Нові спрайти для: Klavier, Klavier Young, PhoenixSOJ, Susato, Mia Young, AthenaCykesSOJ</li>
+					<li>Виправлено іконки для деяких персонажів.</li>
+					<li>Нова музика.</li>
+					<li>Виправлення деяких персонажів.</li>
+					<li>Нова іконка для файлу .exe!</li>
+				</ul>
+			</p>
+			<p>Посилання: <a href="" class="btn" target="_blank">GOOGLE DRIVE</a><a href="" class="btn" target="_blank">ФІКС</a></p>
+{% endblock %}
+
+{% block special2 %}
+</section>
+{% endblock %}

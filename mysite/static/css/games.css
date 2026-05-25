@@ -1,0 +1,25 @@
+.games{
+	opacity: 1!important;
+	font-size: 14px!important;
+	text-shadow: none!important;
+}
+
+main div{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+	grid-gap: .5vw;
+	width: 100%;
+	text-align: center;
+}
+main div aside{
+	background-color: #313251FF;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	border-radius: 4px;
+}
+aside a{
+	background-image: linear-gradient(180deg, rgba(235,0,255,1) 0%, rgba(0,236,255,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 38px;
+}

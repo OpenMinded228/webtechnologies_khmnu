@@ -1,0 +1,15 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block title %}404{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/rules.css' %}">
+
+<h1>Сторінку не знайдено</h1>
+
+<aside>
+    <p>Спробуйте обрати пункт із меню навігації або перевірте адресу сторінки.</p>
+    <img src="{% static 'images/trucy_serious.png'%}" style="display:block; margin: 0 auto;">
+</aside>
+{% endblock %}

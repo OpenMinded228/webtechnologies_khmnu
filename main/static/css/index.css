@@ -1,0 +1,354 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	top: 0;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: white;
+}
+body{
+	background-color: #5E42A6;
+	background-repeat: no-repeat;
+	background-attachment: local;
+	background-position: top right;
+	background-size: 200vh 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+}
+button{
+	background-color: #4C3586;
+	font-size: 24px;
+	margin-left: 5%;
+	padding: 20px;
+}
+header{
+	z-index: 2;
+	position: sticky;
+	width: 100%;
+	min-height: 16px;
+	max-height: 1px;
+	font-size: 16px;
+	margin-top: 20px;
+	padding: 40px 0 40px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-shrink: 0;
+}
+header .header-bg{
+	z-index: 1;
+	width: 100%!important;
+	height: 100%;
+	position: absolute;
+	background-color: #4C3586;
+	opacity: 0;
+}
+header a{
+	text-decoration: none;
+	align-items: center;
+	z-index: 2;
+	letter-spacing: 4px;
+	opacity: 0.6;
+	transition: all .3s;
+}
+header a:hover{
+	opacity: 0.7;
+	font-size: 18px;
+	text-shadow: 0 0 12px;
+}
+header .active{
+	opacity: 1!important;
+	font-size: 16px!important;
+	text-shadow: none!important;
+}
+
+#mobile_btn, #mobile_btn div{
+	display: none;
+}
+
+main{
+	position: inherit;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 100vh;
+	min-height: calc(100dvh - 116px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+main *{
+	padding: .75%;
+	width: 80%;
+	text-align: center;
+}
+main h1{
+	font-size: 68px;
+	font-weight: bold;
+}
+main p{
+	font-size: 29px;
+	opacity: .8;
+}
+
+nav{
+	width: 100%;
+	padding: 40px 0 40px 0;
+}
+nav div{
+	width: 85%;
+	margin-left: auto;
+    margin-right: auto;
+}
+nav div h2{
+	font-size: 4vh;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+nav div p{
+	margin-bottom: 15px;
+	font-size: 20px;
+	opacity: .8;
+}
+.server-info{
+	background-color: #313251;
+}
+article{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	background-color: #373856;
+
+}
+section{
+	width: calc(50% - 8em - 2px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 3em 2em 3em 6em;
+}
+section div{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+section div h3{
+	display: block;
+}
+.fa-stack{
+	vertical-align: middle;
+}
+.section-first{
+	border-top-left-radius: 5px;
+}
+.section-second{
+	border-left: none;
+	border-top-right-radius: 5px;
+}
+.section-third{
+	border-top: none;
+	border-bottom-left-radius: 5px;
+}
+.section-fourth{
+	border-top: none;
+	border-left: none;
+	border-bottom-right-radius: 5px;
+}
+.fa-circle{
+	color: white;
+}
+section i{
+	color: #313251;
+}
+section h3{
+	display: inline;
+	font-size: 20px;
+	font-weight: bold;
+}
+section p{
+	opacity: .6;
+	margin-top: 20px;
+	line-height: 150%;
+	font-size: 18px !important;
+	text-align: justify;
+}
+.discord{
+	background-color: #5E42A6;
+}
+.btn {
+	display: inline-block;
+	padding: 20px 40px;
+	border-radius: 30px;
+	font-size: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	background-color: transparent;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: white;
+	transition: all .2s;
+	position: relative;
+}
+.btn::before{
+	transform: scale(0.25);
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	background: #ffffff;
+	border-radius: 3em;
+	content: '';
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.btn:hover {
+	border-color: rgba(255, 255, 255, 0.55);
+}
+.btn:hover::before{
+	opacity: 0.05;
+	transform: scale(1);
+}
+footer{
+	text-align: right;
+	width: 100%;
+	background-color: #493382;
+	padding: 2% 0 2% 0;
+}
+footer p{
+	opacity: .6;
+	margin-right: 1.25%;
+	line-height: 200%;
+}
+footer a{
+	border-bottom: dotted 1px white;
+	opacity: .6;
+	transition: all .3s;
+}
+footer a:hover{
+	opacity: 1;
+	border-bottom-color: transparent;
+}
+@media screen and (max-width: 1205px){
+	section{
+		width: 100%;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		padding: 2em;
+	}
+	.fa-stack{
+		vertical-align: middle;
+	}
+	.section-first{
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.section-second{
+		border-left: 1px solid rgba(255, 255, 255, 0.15);
+		border-top:none;
+		border-top-right-radius: 0;
+	}
+	.section-third{
+		border-top: none;
+		border-bottom-left-radius: 0;
+	}
+	.section-fourth{
+		border-top: none;
+		border-left: 1px solid rgba(255, 255, 255, 0.15);
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+}
+@media screen and (max-width: 1070px){
+	header{
+		display: none;
+		position: fixed;
+		width: 100%;
+		min-height: 16px;
+		max-height: 1px;
+		font-size: 14px;
+		margin: 0;
+		padding: 0;	
+	}
+	#mobile_btn{
+		display: flex;
+		background-color: #4C3586;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		padding: 0;
+		align-items: center;
+		min-height: fit-content;
+	}
+	.mobile_title{
+		opacity: 1;
+		flex-basis: 40%;
+		text-align: left;
+		font-size: 26px;
+		font-weight: bold;
+		white-space: nowrap;
+		letter-spacing: 0;
+		flex-shrink: 0;
+		padding-left: 20px;		
+	}
+	.mobile_title:hover{
+		opacity: 1;
+		font-size: 26px;
+		text-shadow: none!important;
+	}
+	#mobile_btn div{
+		width: 60%;
+		position: absolute;
+		margin-top:68px;
+		height: 100vh;
+		flex-direction: column;
+		opacity: 1!important;
+	}
+	#buttons {
+		background-color: #4C3586;
+		padding-left:5%;
+	}
+	#buttons *{
+		margin: 15px;
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
+	header .active{
+		opacity: 1!important;
+		font-size: 18px!important;
+		text-shadow: none!important;
+	}
+	main {
+		min-height: 100vh;
+		min-height: 100dvh;
+	}
+	main h1{
+		font-size: 46px;
+		font-weight: bold;
+	}
+	main p{
+		font-size: 20px;
+		opacity: .8;
+	}
+
+	main *{
+
+		padding: 0.75% 0 0.75% 0;
+	}
+	nav div p{
+		text-align: justify;
+		line-height: 150%;
+	}
+	footer{
+		text-align: right;
+		width: 100%;
+		background-color: #493382;
+	}
+	footer p{
+		opacity: .6;
+		margin: 5% 2% 5% 2%;
+	}
+	footer a{
+		border-bottom: dotted 1px white;
+		opacity: .6;
+		transition: all .3s;
+	}
+}

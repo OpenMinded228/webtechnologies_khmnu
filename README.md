@@ -1,0 +1,1 @@
+A django web-project for passing webtechnologies discipline.
